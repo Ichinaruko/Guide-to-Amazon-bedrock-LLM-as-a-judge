@@ -77,9 +77,9 @@ DATASET REQUIREMENTS --
 
 example of a proper JSONL file that you can use :
 ```
-#{"prompt": "Can you explain the theory of relativity in simple terms?", "category": "Readability", "referenceResponse": "The theory of relativity, developed by Einstein, explains how space and time are linked. It says that time moves slower when you're moving very fast and that gravity can bend space-time."}
-#{"prompt": "How can I improve my time management skills?", "category": "Helpfulness", "referenceResponse": "You can improve time management by setting clear goals, prioritizing tasks, avoiding distractions, and using time-blocking techniques."}
-#{"prompt": "Write a well-structured summary of the book 'To Kill a Mockingbird'.", "category": "Coherence", "referenceResponse": "Harper Lee's 'To Kill a Mockingbird' is a novel set in the American South during the 1930s. It follows Scout Finch as she navigates issues of racism, justice, and morality in her small town."}
+{"prompt": "Can you explain the theory of relativity in simple terms?", "category": "Readability", "referenceResponse": "The theory of relativity, developed by Einstein, explains how space and time are linked. It says that time moves slower when you're moving very fast and that gravity can bend space-time."}
+{"prompt": "How can I improve my time management skills?", "category": "Helpfulness", "referenceResponse": "You can improve time management by setting clear goals, prioritizing tasks, avoiding distractions, and using time-blocking techniques."}
+{"prompt": "Write a well-structured summary of the book 'To Kill a Mockingbird'.", "category": "Coherence", "referenceResponse": "Harper Lee's 'To Kill a Mockingbird' is a novel set in the American South during the 1930s. It follows Scout Finch as she navigates issues of racism, justice, and morality in her small town."}
 ```
 
 ### MAKING AN S3 BUCKET 
