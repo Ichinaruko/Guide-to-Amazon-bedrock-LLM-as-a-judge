@@ -4,6 +4,8 @@ Amazon Bedrock allows developers to build and deploy AI applications using found
 
 Amazon Bedrock allows developers to build and deploy AI applications using foundation models (FMs) from multiple providers. Using a **Large Language Model (LLM) as a judge** in Amazon Bedrock means leveraging LLMs to evaluate, rank, or provide feedback on various inputs, such as text generation, sentiment analysis, or even decision-making tasks.
 
+
+
 ### **How an LLM Acts as a Judge in Amazon Bedrock**
 1. **Evaluating AI-generated Content**  
    - The LLM can assess AI-generated responses for correctness, coherence, and relevance.  
@@ -21,6 +23,8 @@ Amazon Bedrock allows developers to build and deploy AI applications using found
    - Can be used in workflows where AI needs to validate input and determine the best course of action.  
    - Example: Filtering inappropriate content in a moderation system.
 
+
+
 ### **Implementation in Amazon Bedrock**
 - **Choose an LLM**  
   Amazon Bedrock provides access to various foundation models from **Anthropic (Claude), AI21 Labs (Jurassic), Meta (Llama), Cohere**, and others.  
@@ -31,9 +35,11 @@ Amazon Bedrock allows developers to build and deploy AI applications using found
 - **Automation & Integration**  
   Use **AWS Lambda** and **Bedrock API** to automate evaluations in workflows.
 
-## **Prerequisites**
 
-### **LLM-as-a-Judge Model Evaluation Prerequisites**  
+
+### **Prerequisites**
+
+## **LLM-as-a-Judge Model Evaluation Prerequisites**  
 
  **AWS Account & Model Access**  
 - Ensure you have an **active AWS account**.  
@@ -55,6 +61,8 @@ Amazon Bedrock allows developers to build and deploy AI applications using found
   - **Model units no-commitment Provisioned Throughputs** across custom models.  
   - **Model units per provisioned model** for your specific custom model.  
 - If needed, **request a quota increase** to accommodate your workload.  
+
+
 
 # **PREPARING A DATASET**
 
@@ -81,6 +89,8 @@ example of a proper JSONL file that you can use :
 {"prompt": "How can I improve my time management skills?", "category": "Helpfulness", "referenceResponse": "You can improve time management by setting clear goals, prioritizing tasks, avoiding distractions, and using time-blocking techniques."}
 {"prompt": "Write a well-structured summary of the book 'To Kill a Mockingbird'.", "category": "Coherence", "referenceResponse": "Harper Lee's 'To Kill a Mockingbird' is a novel set in the American South during the 1930s. It follows Scout Finch as she navigates issues of racism, justice, and morality in her small town."}
 ```
+
+
 
 ### MAKING AN S3 BUCKET 
 
@@ -142,7 +152,9 @@ In **Amazon Bedrock**, this configuration is a **Cross-Origin Resource Sharing (
    - If your frontend app (e.g., a React or Angular web app) tries to interact with Bedrock APIs **without** this configuration, the browser will block the requests due to **CORS restrictions**.  
    - Setting up this CORS policy allows your frontend to communicate with Amazon Bedrock services securely.
 
-### Start an LLM-as-a-judge model evaluation job using the console 
+
+
+#### Start an LLM-as-a-judge model evaluation job using the console 
 
 You can use LLM-as-a-judge on Amazon Bedrock Model Evaluation to assess model performance through a user-friendly console interface. Follow these steps to start an evaluation job:
 
@@ -181,6 +193,7 @@ You can use LLM-as-a-judge on Amazon Bedrock Model Evaluation to assess model pe
 11. To see each record’s prompt input, generation output, ground truth, and individual scores, choose a metric and select “Prompt details”. Hover over any individual score to view its 
     detailed explanation.
     ![image](https://github.com/user-attachments/assets/c3767bd9-6a4c-4c92-8f0e-50adbb9a4f72)
+
 
 
 
