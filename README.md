@@ -124,6 +124,24 @@ example of a proper JSONL file that you can use :
    ```
    PASTE THIS THERE
 
+# Why the above must be pasted in CORS --
+
+In **Amazon Bedrock**, this configuration is a **Cross-Origin Resource Sharing (CORS) policy** that defines how your application can interact with the Amazon Bedrock API from different origins (domains). Here’s why you need it:
+
+### 1. **Cross-Origin Requests**  
+   - When you build a web application that calls Amazon Bedrock APIs from the browser (client-side JavaScript), the browser enforces a security feature called the **Same-Origin Policy**.  
+   - This policy **blocks requests** from a web app running on `https://yourdomain.com` to an API hosted on `https://bedrock.amazonaws.com` unless **CORS is properly configured**.
+
+### 2. **Breaking Down the Configuration**
+   - **`AllowedHeaders: ["*"]`** → Allows all request headers, meaning any custom headers (like `Authorization`) can be sent.  
+   - **`AllowedMethods: ["GET", "PUT", "POST", "DELETE"]`** → Specifies that these HTTP methods are allowed when interacting with the API.  
+   - **`AllowedOrigins: ["*"]`** → Allows requests from any domain (`*` means all origins). This is useful for public APIs but should be restricted in production for security reasons.  
+   - **`ExposeHeaders: ["Access-Control-Allow-Origin"]`** → Ensures that the response includes this header, allowing the client to read it.
+
+### 3. **Why You Need This in Amazon Bedrock**
+   - If your frontend app (e.g., a React or Angular web app) tries to interact with Bedrock APIs **without** this configuration, the browser will block the requests due to **CORS restrictions**.  
+   - Setting up this CORS policy allows your frontend to communicate with Amazon Bedrock services securely.
+
 ### Start an LLM-as-a-judge model evaluation job using the console 
 
 You can use LLM-as-a-judge on Amazon Bedrock Model Evaluation to assess model performance through a user-friendly console interface. Follow these steps to start an evaluation job:
